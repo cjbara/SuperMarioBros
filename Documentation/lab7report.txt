@@ -1,0 +1,22 @@
+These last two weeks we decided to do all of the SDL tutorials in order to get a strong background for coding our Mario game. However, after deciding to use SDL2, we realized the renderer would not load. This lack of a renderer API forced us to only accomplish simple tasks this week. 
+
+Our initial rubric is as follows:
++35 go over SDL tutorials and understand the concepts of SDL in order to move forward with the project
++5 code Mario on a screen, preferably moving around according to user input
+
+We have officially decided to switch to the original SDL in order to solve our rendering problem, so the  code that we submitted to our repository may not be useful for our project. However, the different concepts within the SDL2 tutorials are invaluable for moving forward with our project.
+
+The program that I submitted takes a BMP image (the Mario sprites) and displays them across a whole screen. Internally, the program starts by calling the init() function, which initializes SDL, creates a window, and grabs the screen surface. Next, the program calls the loadSurface function, which loads the BMP file smb_mario_sheet.bmp. This function takes the file, assigns it to an SDL_Surface, and then optimizes it using SDL_ConvertSurface(). The optimization is important to avoid extra overhead every time the surface is used. Next, the program stretches the surface to the length and width of the screen, and blits the image onto the screen and updates the screen. Lastly, the program enters a loop to handle input. If the user enters the ‘esc’ key, the loop ends up breaking and SDL closes. The SDL subsystems are shut down and the program ends.
+
+There are a lot of commented out lines in the program, which is due to the renderer. I did try to load the renderer for hours, but in the end, I gave up and decided to just bit Mario sprite sheet onto the screen.
+
+As far as the tutorials go, I learned how to use SDL very effectively. While the code I wrote does not reflect how many lessons I went through, I now understand the concepts of SDL and am able to create a Mario game. 
+Time log:
+-first few SDL lessons: get Mario on the screen using the blit function in SDL (1 hour) (This is the code that I compiled for the Mario sprite sheet)
+-texture loading and rendering (Since the renderer did not load, we were not able to compile this part of the code) (2 hours) I still understand how the renderer works now and how you can take an SDL_Surface and convert it into an SDL_Texture. Using the textures in SDL2, you can easily render these to the screen. However, in SDL, textures do no exist and the images are all blitted SDL_Surfaces. 
+-Color keying and sprite sheets (2 hours) In order to easily make a game, we must use sprite sheets and clip particular images from these sheets. Also, since the sheets will all have a uniform background (for our BMPs it is cyan), we must use color keying to only have the particular Mario sprite displayed, and not the entire clipped rectangle. To remove the background you use the SDL_SetColorKey function
+-keyboard input (1 hour) The keyboard input is used in SDL with both key states and key presses. The code that I submitted uses this interface in order to close the window that was opened. When the user hits the escape button, the window closes. Key states are going to be very important for our coding purposes, because they will affect Mario’s acceleration and velocity.
+-motion (3 hours) I now understand how to move a character around the screen, and I know how the physics engine will start to work. We researched the physics for the original game, and we will be able to code this using the timing API in SDL
+
+Part 3: Why should I get the points?
+While I was not able to code Mario moving around the screen in SDL2, I now understand the concepts necessary to making a video game. To see these specific skills, look above at the time log, which documents the different lessons I went through in SDL2. I will have to look at the different syntax for SDL compared to SDL2, but I am confident that moving forward, I will be able to effectively code the Super Mario Bros game in SDL. Moving forward, we will start to work on the Mario class, and the Enemies class. These two classes will be the basis of the whole game. Once we are able to put Mario and the enemies onscreen, we will work on their interaction and how the game will progress. We have a good plan for the game, and these SDL tutorials gave us a good foundation in order to create the entire game.
