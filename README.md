@@ -5,7 +5,7 @@ This repository requires SDL2 installed on the system. It plays through the firs
 a replica of the classic NES side-scroller with some modifications.
 
 <h3 class="modal-title" id="myModalLabel">Super Mario Bros</h3>
-        <img src="assets/images/mario2.jpg">
+        <img src="http://coryjbara.com/assets/images/mario2.jpg">
         <h4>Project Overview</h4>
         <p>Mario is able to jump and land on the platforms throughout the level to get to the flag on the far right side! Throughout the level, you will encounter dangerous enemies: goombas and koopas. If you touch one of those enemies you will lose a life. Additionally, if you fall into a pit you will lose a life. If you lose three lives the game is over. However, you may kill enemies by jumping and landing on top of them. Furthermore if you get mushroom, you will turn into big Mario and be able to get hit by an enemy twice without losing a life. If manage to get to the flag at the end of the level you will win!</p>
         <h4>What I Learned</h4>
